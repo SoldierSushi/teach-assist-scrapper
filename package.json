@@ -1,0 +1,26 @@
+{
+  "name": "serverhostingtest",
+  "version": "1.0.0",
+  "description": "Just trying to get web scrapping working with javascript and making a better NRG-Hacks project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SoldierSushi/serverHostingTest.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SoldierSushi/serverHostingTest/issues"
+  },
+  "homepage": "https://github.com/SoldierSushi/serverHostingTest#readme",
+  "dependencies": {
+    "cheerio": "^1.0.0",
+    "cherio": "^1.0.0-rc.2",
+    "mongodb": "^6.13.1",
+    "puppeteer": "^24.2.1"
+  }
+}

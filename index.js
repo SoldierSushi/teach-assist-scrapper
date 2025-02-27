@@ -16,8 +16,8 @@ app.get('/api/results', (async (req, res) => {
     await page.screenshot({ path: "image.png"});
 
     await page.waitForSelector('td input[name="username"]');
-    await page.type('td input[name="username"]', 'username');
-    await page.type('td input[name="password"]', 'password');
+    await page.type('td input[name="username"]', '348928951');
+    await page.type('td input[name="password"]', 'rchat845');
     await page.click('td input[name="submit"]');
 
     await page.waitForNavigation({ waitUntil: "domcontentloaded" });

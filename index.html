@@ -5,35 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Server Hosting Test</title>
     <link rel="stylesheet" href="/index.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-        }
-        #output {
-            margin-top: 20px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-        .card {
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            padding: 10px;
-            margin: 10px;
-            background: #f9f9f9;
-            width: 200px;
-            text-align: center;
-        }
-        .course {
-            font-weight: bold;
-            font-size: 16px;
-        }
-        .grade {
-            color: #007bff;
-            font-size: 18px;
-        }
-    </style>
 </head>
 <body>
     <h2>Login</h2>
@@ -85,6 +56,7 @@
                 gradeLabel.className = "grade";
                 gradeLabel.textContent = `Grade: ${item.grade}`;
 
+                console.log(item);
                 card.appendChild(courseLabel);
                 card.appendChild(gradeLabel);
                 outputDiv.appendChild(card);

@@ -1,6 +1,7 @@
 const express = require("express");
 const puppeteer = require("puppeteer");
 const path = require("path");
+const PORT = 3000;
 
 const app = express();
 
@@ -61,6 +62,6 @@ app.post("/api/results", async (req, res) => {
 });
 
 // Start the server
-app.listen(8080, () => {
-    console.log("Server is listening on port 8080");
+app.listen(PORT, () => {
+    console.log(`Server is listening on port: ${PORT}`);
 });

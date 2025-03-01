@@ -8,6 +8,9 @@ const app = express();
 // Middleware to parse JSON requests
 app.use(express.json());
 
+// Serve static files (CSS, JS, images)
+app.use(express.static(path.join(__dirname)));
+
 // Serve HTML file
 app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "index.html"));

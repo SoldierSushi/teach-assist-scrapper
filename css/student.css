@@ -1,0 +1,81 @@
+/* Apply the same background and styling */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: radial-gradient(circle, #ffb384, #ffdec5);
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Header Styling */
+h2 {
+    font-size: 28px;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+/* Container for grades */
+#output {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    width: 80%;
+    max-width: 800px;
+}
+
+/* Card Design for Grades */
+.card {
+    background: rgba(255, 230, 204, 0.7); /* Blends with background */
+    border: 1px solid rgba(255, 170, 128, 0.3);
+    border-radius: 12px;
+    padding: 15px;
+    width: 220px;
+    text-align: center;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.05);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Hover Effect for Cards */
+.card:hover {
+    background: rgba(255, 210, 180, 0.85); /* Slightly darker on hover */
+    box-shadow: 4px 6px 12px rgba(0, 0, 0, 0.1);
+    transform: scale(1.05);
+}
+
+/* Course title styling */
+.course {
+    font-weight: bold;
+    font-size: 18px;
+    color: #444;
+    margin-bottom: 5px;
+}
+
+/* Grade styling */
+.grade {
+    color: #007bff;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    #output {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+        max-width: 300px;
+    }
+}

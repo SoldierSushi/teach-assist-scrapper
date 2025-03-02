@@ -8,16 +8,26 @@ const app = express();
 // Middleware to parse JSON requests
 app.use(express.json());
 
-// Serve static files (CSS, JS, images)
-app.use(express.static(path.join(__dirname)));
+// Serve the "html" folder under "/"
+app.use(express.static(path.join(__dirname, "html")));
 
-// Serve HTML file
+// Serve the "css" folder under "/css/"
+app.use("/css", express.static(path.join(__dirname, "css")));
+
+// Serve image files from the root
+app.use(express.static(__dirname));
+
+// Routes for specific HTML files
 app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "index.html"));
+    res.sendFile(path.join(__dirname, "html", "index.html"));
+});
+
+app.get("/student", (req, res) => {
+    res.sendFile(path.join(__dirname, "html", "student.html"));
 });
 
 // Change `/api/results` from GET to POST to accept user credentials
-app.post("/api/results", async (req, res) => {
+app.post("/results", async (req, res) => {
     const { username, password } = req.body;
 
     if (!username || !password) {

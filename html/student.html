@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/student.css">
+    <title>Student Grades</title>
+</head>
+<body>
+    <h2>Student Grades</h2>
+    <div id="output"></div>
+    <script>
+        function displayResults() {
+            const outputDiv = document.getElementById("output");
+            outputDiv.innerHTML = ""; // Clear previous results
+
+            // Retrieve data from sessionStorage
+            const data = JSON.parse(sessionStorage.getItem("userData"));
+
+            if (!data || data.length === 0) {
+                outputDiv.innerHTML = "<p>No grades available.</p>";
+                return;
+            }
+
+            data.forEach(item => {
+                const card = document.createElement("div");
+                card.className = "card";
+
+                const courseLabel = document.createElement("div");
+                courseLabel.className = "course";
+                courseLabel.textContent = item.course;
+
+                const gradeLabel = document.createElement("div");
+                gradeLabel.className = "grade";
+                gradeLabel.textContent = `Grade: ${item.grade}`;
+
+                console.log(item);
+                card.appendChild(courseLabel);
+                card.appendChild(gradeLabel);
+                outputDiv.appendChild(card);
+            });
+        }
+
+        // Run when the page loads
+        window.onload = displayResults;
+    </script>
+</body>
+</html>

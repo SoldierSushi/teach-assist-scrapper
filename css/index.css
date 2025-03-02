@@ -1,0 +1,105 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: radial-gradient(circle, #ffb384, #ffdec5);
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Subtle Transparent Input Field */
+input {
+    background: rgba(255, 255, 255, 0.3); /* Soft transparency */
+    border: 1px solid rgba(255, 170, 128, 0.5); /* Light border */
+    padding: 12px 15px;
+    font-size: 16px;
+    border-radius: 8px;
+    outline: none;
+    width: 250px;
+    transition: box-shadow 0.3s ease, background 0.3s ease;
+    color: #333;
+}
+
+/* Change background slightly on focus */
+input:focus {
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 0px 0px 8px rgba(255, 170, 128, 0.6);
+}
+
+/* Stylish Login Button */
+button {
+    background: linear-gradient(135deg, #ff7b00, #ffb384);
+    border: none;
+    padding: 12px 20px;
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 15px;
+    width: 250px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Add hover effect */
+button:hover {
+    background: linear-gradient(135deg, #ff5500, #ff9b50);
+    box-shadow: 4px 6px 12px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+/* Add subtle click animation */
+button:active {
+    transform: scale(0.98);
+}
+
+/* Center Output Section */
+#output {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Improved Card Design */
+.card {
+    background: rgba(255, 230, 204, 0.7); /* Blends with background */
+    border: 1px solid rgba(255, 170, 128, 0.3);
+    border-radius: 12px;
+    padding: 20px;
+    margin: 10px;
+    width: 240px;
+    text-align: center;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.05);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Hover Effect for Cards */
+.card:hover {
+    background: rgba(255, 210, 180, 0.85); /* Slightly darker on hover */
+    box-shadow: 4px 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Course title styling */
+.course {
+    font-weight: bold;
+    font-size: 20px;
+    color: #444;
+    margin-bottom: 5px;
+}
+
+/* Grade styling */
+.grade {
+    color: #007bff;
+    font-size: 22px;
+    font-weight: bold;
+}

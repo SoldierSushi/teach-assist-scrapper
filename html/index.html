@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Server Hosting Test</title>
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+<body>
+    <h2>Rustem's Teach Assist</h2>
+    <input type="text" name="username" id="username" placeholder="Username">
+    <input type="password" name="password" id="password" placeholder="Password">
+    <button onclick="work()">LOGIN</button>
+    <script>
+        async function work() {
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            if (!username || !password) {
+                alert("Please enter both username and password!");
+                return;
+            }
+
+            const response = await fetch('/results', {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ username, password })
+            });
+
+            const result = await response.json();
+
+            //store results in sessionStorage and redirect the user to student.html
+            sessionStorage.setItem("userData", JSON.stringify(result));
+            window.location.href = "/html/student.html";
+        }
+    </script>
+</body>
+</html>
